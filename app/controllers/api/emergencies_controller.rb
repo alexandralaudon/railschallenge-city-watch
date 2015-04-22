@@ -10,7 +10,7 @@ module Api
       def query_params
         # this assumes that a responder belongs to an emergency and has an :emergency_id
         # allowing us to filter by this
-        params.permit(:responder_id)
+        params.permit(:code, :fire_severity, :police_severity, :medical_severity, :resolved_at)
       end
 
   end
