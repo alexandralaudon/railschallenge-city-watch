@@ -8,6 +8,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'kaminari' # adds pagination to ActiveModels
 
 group :development, :test do
+  gem 'faker', '~> 1.4.3'
   gem 'rubocop', '0.30.0'
   gem 'minitest-rails', '~> 2.1.1'
   gem 'database_cleaner', '1.4.1'
