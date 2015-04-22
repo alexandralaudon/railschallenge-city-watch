@@ -6,7 +6,7 @@ namespace :refresh do
       Emergency.destroy_all
       Responder.destroy_all
 
-      level_array = [0..4]
+      level_array = (0..4).to_a
       letter_array = ("A".."Z").to_a
 
       12.times do |emergency|
