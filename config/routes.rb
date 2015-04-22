@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :emergencies, only: [:create, :update]
+  namespace :api do
+    resources :emergencies, :responders
+  end
 
 end
