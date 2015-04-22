@@ -20,7 +20,7 @@ namespace :refresh do
       type_array = ['Fire', 'Police', 'Medical']
 
       25.times do |responder|
-        Responder.create(type: type_array.sample, name: Faker::Name.name, capacity: level_array.sample, on_duty: on_duty_array.sample, emergency_id: emergency_id_array.sample)
+        Responder.create(responder_type: type_array.sample, name: Faker::Name.name, capacity: level_array.sample, on_duty: on_duty_array.sample, emergency_id: emergency_id_array.sample)
       end
       puts "#{Responder.count} responders generated."
 
