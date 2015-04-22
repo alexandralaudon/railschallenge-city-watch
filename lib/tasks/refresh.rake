@@ -7,9 +7,10 @@ namespace :refresh do
       Responder.destroy_all
 
       level_array = [0..4]
+      letter_array = ("A".."Z").to_a
 
       12.times do |emergency|
-        Emergency.create(code: "#{Faker}"'E-00000001', fire_severity: level_array.sample, police_severity: level_array.sample, medical_severity: level_array.sample)
+        Emergency.create(code: "#{letter_array.sample}-#{Faker::Code.ean[0,7]}", fire_severity: level_array.sample, police_severity: level_array.sample, medical_severity: level_array.sample)
       end
       emergency_id_array = Emergency.pluck(:id)
       puts "#{Emergency.count} emergencies generated.  Emergency_id_array: #{emergency_id_array}"
