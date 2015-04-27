@@ -45,7 +45,7 @@ module Api
         render json: get_resource.errors, status: :unprocessable_entity
       end
     end
-    
+
     private
 
       # Returns the resource from the created instance variable

@@ -1,5 +1,10 @@
 class RespondersController < ApplicationController
 
+  def index
+    @responders = Responder.all
+    render json: @responders, status: :created
+  end
+
   private
 
     def responder_params
